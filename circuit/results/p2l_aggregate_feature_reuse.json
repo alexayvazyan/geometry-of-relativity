@@ -1,0 +1,83 @@
+{
+  "gemma2-2b": {
+    "settings": [
+      "height_k1",
+      "height_k15",
+      "height_k4",
+      "speed_k15",
+      "weight_k15"
+    ],
+    "pairwise_overlap_top10": {
+      "height_k1 \u2229 height_k1": 10,
+      "height_k1 \u2229 height_k15": 5,
+      "height_k1 \u2229 height_k4": 8,
+      "height_k1 \u2229 speed_k15": 1,
+      "height_k1 \u2229 weight_k15": 3,
+      "height_k15 \u2229 height_k15": 10,
+      "height_k15 \u2229 height_k4": 4,
+      "height_k15 \u2229 speed_k15": 0,
+      "height_k15 \u2229 weight_k15": 3,
+      "height_k4 \u2229 height_k4": 10,
+      "height_k4 \u2229 speed_k15": 1,
+      "height_k4 \u2229 weight_k15": 1,
+      "speed_k15 \u2229 speed_k15": 10,
+      "speed_k15 \u2229 weight_k15": 2,
+      "weight_k15 \u2229 weight_k15": 10
+    },
+    "feats_in_multiple_settings": {
+      "11344": 4,
+      "15873": 3,
+      "7428": 3,
+      "12108": 3,
+      "4880": 3,
+      "8989": 3,
+      "1475": 2,
+      "6724": 2,
+      "2161": 2,
+      "2995": 2,
+      "3832": 2,
+      "9147": 2,
+      "11003": 2
+    }
+  },
+  "gemma2-9b": {
+    "settings": [
+      "height_k1",
+      "height_k15",
+      "height_k4",
+      "speed_k15",
+      "weight_k15"
+    ],
+    "pairwise_overlap_top10": {
+      "height_k1 \u2229 height_k1": 10,
+      "height_k1 \u2229 height_k15": 5,
+      "height_k1 \u2229 height_k4": 7,
+      "height_k1 \u2229 speed_k15": 2,
+      "height_k1 \u2229 weight_k15": 2,
+      "height_k15 \u2229 height_k15": 10,
+      "height_k15 \u2229 height_k4": 8,
+      "height_k15 \u2229 speed_k15": 5,
+      "height_k15 \u2229 weight_k15": 6,
+      "height_k4 \u2229 height_k4": 10,
+      "height_k4 \u2229 speed_k15": 4,
+      "height_k4 \u2229 weight_k15": 5,
+      "speed_k15 \u2229 speed_k15": 10,
+      "speed_k15 \u2229 weight_k15": 4,
+      "weight_k15 \u2229 weight_k15": 10
+    },
+    "feats_in_multiple_settings": {
+      "11020": 4,
+      "6163": 4,
+      "1629": 4,
+      "1136": 4,
+      "13176": 4,
+      "14076": 4,
+      "2324": 3,
+      "420": 3,
+      "246": 3,
+      "10376": 2,
+      "12383": 2,
+      "1127": 2
+    }
+  }
+}

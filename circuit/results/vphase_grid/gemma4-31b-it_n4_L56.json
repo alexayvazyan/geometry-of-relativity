@@ -1,0 +1,80 @@
+{
+  "name": "gemma4-31b-it_n4_L56",
+  "model_id": "google/gemma-4-31B-it",
+  "model_short": "gemma4-31b-it",
+  "n_ref": 4,
+  "layer": 56,
+  "n_layers": 60,
+  "result": {
+    "n_train": 231,
+    "n_test": 154,
+    "n_missing": 0,
+    "primal_z_norm": 6.970921039581299,
+    "manifold_norm_mean": 10.981428525393776,
+    "settings": {
+      "baseline": {
+        "corr_LD_z": -0.05642382800879596,
+        "corr_LD_x": 0.007538452953594949,
+        "partial_LD_z_given_x": -0.06498917535171608,
+        "ld_mean": -2.499594211578369,
+        "ld_std": 0.5579381585121155,
+        "n_x_pos_slope": 4,
+        "n_x_neg_slope": 6
+      },
+      "manifold_a0.50": {
+        "corr_LD_z": -0.08675503128597095,
+        "corr_LD_x": 0.015316406363898362,
+        "partial_LD_z_given_x": -0.10157632926602472,
+        "ld_mean": -2.4362823963165283,
+        "ld_std": 0.6302627921104431,
+        "n_x_pos_slope": 5,
+        "n_x_neg_slope": 5
+      },
+      "proj_out_a0.50": {
+        "corr_LD_z": 0.011331658142513216,
+        "corr_LD_x": -0.07395955230291011,
+        "partial_LD_z_given_x": 0.04511388906351524,
+        "ld_mean": -2.524350643157959,
+        "ld_std": 0.5790237188339233,
+        "n_x_pos_slope": 4,
+        "n_x_neg_slope": 6
+      },
+      "manifold_a0.75": {
+        "corr_LD_z": -0.08761872213274452,
+        "corr_LD_x": 0.03199216195534411,
+        "partial_LD_z_given_x": -0.10991636624430913,
+        "ld_mean": -2.3890016078948975,
+        "ld_std": 0.7033485770225525,
+        "n_x_pos_slope": 4,
+        "n_x_neg_slope": 6
+      },
+      "proj_out_a0.75": {
+        "corr_LD_z": 0.055222800553411236,
+        "corr_LD_x": -0.08711615481603169,
+        "partial_LD_z_given_x": 0.09913482337482137,
+        "ld_mean": -2.5006086826324463,
+        "ld_std": 0.5978314280509949,
+        "n_x_pos_slope": 6,
+        "n_x_neg_slope": 4
+      },
+      "manifold_a1.00": {
+        "corr_LD_z": -0.09377130970730602,
+        "corr_LD_x": 0.01627956727477396,
+        "partial_LD_z_given_x": -0.10967144947753503,
+        "ld_mean": -2.3159496784210205,
+        "ld_std": 0.781100332736969,
+        "n_x_pos_slope": 4,
+        "n_x_neg_slope": 6
+      },
+      "proj_out_a1.00": {
+        "corr_LD_z": 0.11324460678630818,
+        "corr_LD_x": -0.1810081354511622,
+        "partial_LD_z_given_x": 0.20698103753694777,
+        "ld_mean": -2.458603858947754,
+        "ld_std": 0.6046806573867798,
+        "n_x_pos_slope": 8,
+        "n_x_neg_slope": 2
+      }
+    }
+  }
+}

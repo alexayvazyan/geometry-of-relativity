@@ -1,0 +1,763 @@
+{
+  "args": {
+    "models": [
+      "google/gemma-4-E2B-it",
+      "google/gemma-4-E4B-it",
+      "google/gemma-4-31B-it"
+    ],
+    "shorts": [
+      "gemma4-e2b-it",
+      "gemma4-e4b-it",
+      "gemma4-31b-it"
+    ],
+    "n_refs": [
+      1,
+      4,
+      8
+    ],
+    "alphas": [
+      0.5,
+      0.75,
+      1.0
+    ],
+    "n_x": 10,
+    "n_z": 10,
+    "n_seeds": 5,
+    "n_train_seeds": 3,
+    "layer_frac": 0.78,
+    "layer_overrides": [
+      "gemma4-31b-it=56"
+    ],
+    "quant_4bit_models": [
+      "gemma4-31b-it"
+    ],
+    "high_word": "big",
+    "low_word": "small",
+    "prompt": "The square in the last image is",
+    "out_name": "vphase_grid",
+    "skip_completed": false,
+    "limit_stim": null
+  },
+  "cells": [
+    {
+      "name": "gemma4-e2b-it_n1_L27",
+      "model_id": "google/gemma-4-E2B-it",
+      "model_short": "gemma4-e2b-it",
+      "n_ref": 1,
+      "layer": 27,
+      "n_layers": 35,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 7.4656662940979,
+        "manifold_norm_mean": 10.67856947364164,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": -0.14656826256178224,
+            "corr_LD_x": -0.283958197793744,
+            "partial_LD_z_given_x": -0.036494463549439415,
+            "ld_mean": -5.0107550621032715,
+            "ld_std": 1.5695836544036865,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": -0.12285189899956693,
+            "corr_LD_x": -0.32316346532791695,
+            "partial_LD_z_given_x": 0.00867651332050627,
+            "ld_mean": -4.802962779998779,
+            "ld_std": 1.7337974309921265,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": -0.015073823558744278,
+            "corr_LD_x": -0.3524211808093442,
+            "partial_LD_z_given_x": 0.14841944403579352,
+            "ld_mean": -4.957589149475098,
+            "ld_std": 1.7711344957351685,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": -0.11709743147046373,
+            "corr_LD_x": -0.3363206597382016,
+            "partial_LD_z_given_x": 0.021556107042520648,
+            "ld_mean": -4.638798713684082,
+            "ld_std": 1.877217173576355,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": 0.03556652441284618,
+            "corr_LD_x": -0.3895174275415236,
+            "partial_LD_z_given_x": 0.22865417902690194,
+            "ld_mean": -4.943587779998779,
+            "ld_std": 1.9207754135131836,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": -0.11464802752814335,
+            "corr_LD_x": -0.3604474591635846,
+            "partial_LD_z_given_x": 0.03603637649380089,
+            "ld_mean": -4.484780788421631,
+            "ld_std": 2.0590975284576416,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": 0.08576692196596286,
+            "corr_LD_x": -0.3989539449995418,
+            "partial_LD_z_given_x": 0.29403067393696947,
+            "ld_mean": -4.9133524894714355,
+            "ld_std": 2.0811233520507812,
+            "n_x_pos_slope": 8,
+            "n_x_neg_slope": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-e2b-it_n4_L27",
+      "model_id": "google/gemma-4-E2B-it",
+      "model_short": "gemma4-e2b-it",
+      "n_ref": 4,
+      "layer": 27,
+      "n_layers": 35,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 7.35408878326416,
+        "manifold_norm_mean": 9.451576711216203,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": 0.11348657719652579,
+            "corr_LD_x": -0.36011686080211697,
+            "partial_LD_z_given_x": 0.3031272269281727,
+            "ld_mean": -3.4874188899993896,
+            "ld_std": 1.4992960691452026,
+            "n_x_pos_slope": 9,
+            "n_x_neg_slope": 1
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": -0.24980309015852922,
+            "corr_LD_x": -0.44265699433772615,
+            "partial_LD_z_given_x": -0.086818516850816,
+            "ld_mean": -3.60288143157959,
+            "ld_std": 1.5418847799301147,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": 0.08274344658427175,
+            "corr_LD_x": -0.2654802282592728,
+            "partial_LD_z_given_x": 0.2151910476417477,
+            "ld_mean": -3.552353858947754,
+            "ld_std": 1.4015382528305054,
+            "n_x_pos_slope": 9,
+            "n_x_neg_slope": 1
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": -0.3538152014338228,
+            "corr_LD_x": -0.45017605878114597,
+            "partial_LD_z_given_x": -0.21077135199420083,
+            "ld_mean": -3.69399356842041,
+            "ld_std": 1.6867507696151733,
+            "n_x_pos_slope": 1,
+            "n_x_neg_slope": 9
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": 0.0579302660493388,
+            "corr_LD_x": -0.22506724847589082,
+            "partial_LD_z_given_x": 0.16681482021690902,
+            "ld_mean": -3.5917208194732666,
+            "ld_std": 1.3558130264282227,
+            "n_x_pos_slope": 8,
+            "n_x_neg_slope": 2
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": -0.4089779363452582,
+            "corr_LD_x": -0.439817555125924,
+            "partial_LD_z_given_x": -0.2817750142105345,
+            "ld_mean": -3.7949471473693848,
+            "ld_std": 1.8761624097824097,
+            "n_x_pos_slope": 1,
+            "n_x_neg_slope": 9
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": 0.04876745259183562,
+            "corr_LD_x": -0.17314091484209151,
+            "partial_LD_z_given_x": 0.13161632967370082,
+            "ld_mean": -3.6193182468414307,
+            "ld_std": 1.3220386505126953,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-e2b-it_n8_L27",
+      "model_id": "google/gemma-4-E2B-it",
+      "model_short": "gemma4-e2b-it",
+      "n_ref": 8,
+      "layer": 27,
+      "n_layers": 35,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 3.807178258895874,
+        "manifold_norm_mean": 4.143859019548812,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": -0.16460935853012532,
+            "corr_LD_x": 0.18461197225873838,
+            "partial_LD_z_given_x": -0.2658554794212485,
+            "ld_mean": -1.934253215789795,
+            "ld_std": 0.37613409757614136,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": 0.26052822752092475,
+            "corr_LD_x": 0.32425357501516844,
+            "partial_LD_z_given_x": 0.14986803450022518,
+            "ld_mean": -1.9837661981582642,
+            "ld_std": 0.3982768654823303,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": -0.0696966368220963,
+            "corr_LD_x": -0.008673660624902603,
+            "partial_LD_z_given_x": -0.07234811433924675,
+            "ld_mean": -2.870941638946533,
+            "ld_std": 0.3999844789505005,
+            "n_x_pos_slope": 3,
+            "n_x_neg_slope": 7
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": 0.44563852942945203,
+            "corr_LD_x": 0.3447720721815509,
+            "partial_LD_z_given_x": 0.35690955342369474,
+            "ld_mean": -2.0121753215789795,
+            "ld_std": 0.4535594880580902,
+            "n_x_pos_slope": 9,
+            "n_x_neg_slope": 1
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": -0.03649403729331053,
+            "corr_LD_x": -0.03801421099911521,
+            "partial_LD_z_given_x": -0.02314073958458799,
+            "ld_mean": -3.3863637447357178,
+            "ld_std": 0.41807857155799866,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": 0.5560420513739579,
+            "corr_LD_x": 0.36219761007289264,
+            "partial_LD_z_given_x": 0.4806349164139483,
+            "ld_mean": -2.034090995788574,
+            "ld_std": 0.5296165347099304,
+            "n_x_pos_slope": 9,
+            "n_x_neg_slope": 1
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": 0.04906901048278961,
+            "corr_LD_x": -0.12715236043000505,
+            "partial_LD_z_given_x": 0.11058083621217951,
+            "ld_mean": -4.005681991577148,
+            "ld_std": 0.448966383934021,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-e4b-it_n1_L32",
+      "model_id": "google/gemma-4-E4B-it",
+      "model_short": "gemma4-e4b-it",
+      "n_ref": 1,
+      "layer": 32,
+      "n_layers": 42,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 6.474429607391357,
+        "manifold_norm_mean": 8.290501243629741,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": 0.22788996103955098,
+            "corr_LD_x": 0.18574304431218655,
+            "partial_LD_z_given_x": 0.170126506746218,
+            "ld_mean": -0.6376731395721436,
+            "ld_std": 1.2012983560562134,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": 0.043656894831483786,
+            "corr_LD_x": 0.032878673434397834,
+            "partial_LD_z_given_x": 0.03323413725756898,
+            "ld_mean": -0.721916675567627,
+            "ld_std": 1.2158797979354858,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": 0.14082318188999732,
+            "corr_LD_x": 0.22597482965171753,
+            "partial_LD_z_given_x": 0.055717792491584504,
+            "ld_mean": -0.623629093170166,
+            "ld_std": 1.1763427257537842,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": -0.06055872467077795,
+            "corr_LD_x": -0.048323653558841745,
+            "partial_LD_z_given_x": -0.044930974562276835,
+            "ld_mean": -0.7740851044654846,
+            "ld_std": 1.2701668739318848,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": 0.07343233161869275,
+            "corr_LD_x": 0.23460896007288026,
+            "partial_LD_z_given_x": -0.023844865646637698,
+            "ld_mean": -0.609529972076416,
+            "ld_std": 1.1898057460784912,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": -0.14154250434502372,
+            "corr_LD_x": -0.09607048137593065,
+            "partial_LD_z_given_x": -0.11285519492523993,
+            "ld_mean": -0.8354805111885071,
+            "ld_std": 1.3470972776412964,
+            "n_x_pos_slope": 3,
+            "n_x_neg_slope": 7
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": 0.01381220643473652,
+            "corr_LD_x": 0.23848090695905638,
+            "partial_LD_z_given_x": -0.09271856623665722,
+            "ld_mean": -0.6235771775245667,
+            "ld_std": 1.2032502889633179,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-e4b-it_n4_L32",
+      "model_id": "google/gemma-4-E4B-it",
+      "model_short": "gemma4-e4b-it",
+      "n_ref": 4,
+      "layer": 32,
+      "n_layers": 42,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 7.908960342407227,
+        "manifold_norm_mean": 9.073986221866315,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": -0.1888437717313212,
+            "corr_LD_x": -0.190174833902308,
+            "partial_LD_z_given_x": -0.12481770399176254,
+            "ld_mean": 0.19650070369243622,
+            "ld_std": 1.1139878034591675,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": -0.2921996849814164,
+            "corr_LD_x": -0.17066012270172123,
+            "partial_LD_z_given_x": -0.2477319525536037,
+            "ld_mean": 0.06553748995065689,
+            "ld_std": 1.2155096530914307,
+            "n_x_pos_slope": 3,
+            "n_x_neg_slope": 7
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": -0.15884036241110647,
+            "corr_LD_x": 0.24801054946992607,
+            "partial_LD_z_given_x": -0.29205599584983344,
+            "ld_mean": -0.05242454260587692,
+            "ld_std": 1.1839799880981445,
+            "n_x_pos_slope": 3,
+            "n_x_neg_slope": 7
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": -0.3374506489777696,
+            "corr_LD_x": -0.1813342424439167,
+            "partial_LD_z_given_x": -0.2937145833276135,
+            "ld_mean": -0.047818172723054886,
+            "ld_std": 1.3156664371490479,
+            "n_x_pos_slope": 1,
+            "n_x_neg_slope": 9
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": -0.12866375673494862,
+            "corr_LD_x": 0.46030813889193445,
+            "partial_LD_z_given_x": -0.3869824735045482,
+            "ld_mean": -0.3775492012500763,
+            "ld_std": 1.3674215078353882,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": -0.3799603954299621,
+            "corr_LD_x": -0.18943741586517113,
+            "partial_LD_z_given_x": -0.33784790451646163,
+            "ld_mean": -0.2131902575492859,
+            "ld_std": 1.4361225366592407,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": -0.09037071497900727,
+            "corr_LD_x": 0.5732862576566784,
+            "partial_LD_z_given_x": -0.4290035418362734,
+            "ld_mean": -0.8179947733879089,
+            "ld_std": 1.615954875946045,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-e4b-it_n8_L32",
+      "model_id": "google/gemma-4-E4B-it",
+      "model_short": "gemma4-e4b-it",
+      "n_ref": 8,
+      "layer": 32,
+      "n_layers": 42,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 8.447286605834961,
+        "manifold_norm_mean": 8.757710639312315,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": -0.2841179752626652,
+            "corr_LD_x": -0.5148893090393168,
+            "partial_LD_z_given_x": -0.09741101626447192,
+            "ld_mean": -0.33154216408729553,
+            "ld_std": 1.23941171169281,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": -0.40276505649882005,
+            "corr_LD_x": -0.562529946057856,
+            "partial_LD_z_given_x": -0.23243130144073063,
+            "ld_mean": -0.04459292069077492,
+            "ld_std": 1.3086837530136108,
+            "n_x_pos_slope": 3,
+            "n_x_neg_slope": 7
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": -0.40494898163832527,
+            "corr_LD_x": 0.0866476749854075,
+            "partial_LD_z_given_x": -0.4825713760948636,
+            "ld_mean": -1.102475643157959,
+            "ld_std": 1.211722731590271,
+            "n_x_pos_slope": 3,
+            "n_x_neg_slope": 7
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": -0.42157331994428726,
+            "corr_LD_x": -0.5624746639607896,
+            "partial_LD_z_given_x": -0.25731064891251065,
+            "ld_mean": 0.07348454743623734,
+            "ld_std": 1.360567569732666,
+            "n_x_pos_slope": 3,
+            "n_x_neg_slope": 7
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": -0.34565669777896196,
+            "corr_LD_x": 0.29387987545223937,
+            "partial_LD_z_given_x": -0.5307564585818694,
+            "ld_mean": -1.4584009647369385,
+            "ld_std": 1.230933666229248,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": -0.4377790262724624,
+            "corr_LD_x": -0.5484179822018623,
+            "partial_LD_z_given_x": -0.2830121912554622,
+            "ld_mean": 0.16843286156654358,
+            "ld_std": 1.4448286294937134,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": -0.2594413793835005,
+            "corr_LD_x": 0.477213726679667,
+            "partial_LD_z_given_x": -0.5620509638263044,
+            "ld_mean": -1.9301948547363281,
+            "ld_std": 1.2841508388519287,
+            "n_x_pos_slope": 2,
+            "n_x_neg_slope": 8
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-31b-it_n1_L56",
+      "model_id": "google/gemma-4-31B-it",
+      "model_short": "gemma4-31b-it",
+      "n_ref": 1,
+      "layer": 56,
+      "n_layers": 60,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 5.239487648010254,
+        "manifold_norm_mean": 9.840143101486845,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": 0.0027768252856841293,
+            "corr_LD_x": -0.3196066686457694,
+            "partial_LD_z_given_x": 0.15190610322677287,
+            "ld_mean": -0.9656047224998474,
+            "ld_std": 0.9242667555809021,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": -0.0005064528374770482,
+            "corr_LD_x": -0.30709318350834236,
+            "partial_LD_z_given_x": 0.14167974296405295,
+            "ld_mean": -0.9613433480262756,
+            "ld_std": 0.9361516237258911,
+            "n_x_pos_slope": 8,
+            "n_x_neg_slope": 2
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": 0.01465688228556696,
+            "corr_LD_x": -0.3339403314263433,
+            "partial_LD_z_given_x": 0.173182964870534,
+            "ld_mean": -0.9794541597366333,
+            "ld_std": 0.9008287787437439,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": -0.013683175765849497,
+            "corr_LD_x": -0.29140112356145564,
+            "partial_LD_z_given_x": 0.11866510694385968,
+            "ld_mean": -0.9600750803947449,
+            "ld_std": 0.9754862785339355,
+            "n_x_pos_slope": 8,
+            "n_x_neg_slope": 2
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": 0.02025493002666499,
+            "corr_LD_x": -0.3450633946623869,
+            "partial_LD_z_given_x": 0.18566675211853914,
+            "ld_mean": -0.9982244372367859,
+            "ld_std": 0.8803473114967346,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": -0.017499577553134235,
+            "corr_LD_x": -0.2853401280992499,
+            "partial_LD_z_given_x": 0.11129935801363097,
+            "ld_mean": -0.9541395902633667,
+            "ld_std": 1.0114952325820923,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": 0.019556720645162135,
+            "corr_LD_x": -0.35297259143182774,
+            "partial_LD_z_given_x": 0.18916253540738845,
+            "ld_mean": -1.0246549844741821,
+            "ld_std": 0.8437171578407288,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-31b-it_n4_L56",
+      "model_id": "google/gemma-4-31B-it",
+      "model_short": "gemma4-31b-it",
+      "n_ref": 4,
+      "layer": 56,
+      "n_layers": 60,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 6.970921039581299,
+        "manifold_norm_mean": 10.981428525393776,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": -0.05642382800879596,
+            "corr_LD_x": 0.007538452953594949,
+            "partial_LD_z_given_x": -0.06498917535171608,
+            "ld_mean": -2.499594211578369,
+            "ld_std": 0.5579381585121155,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": -0.08675503128597095,
+            "corr_LD_x": 0.015316406363898362,
+            "partial_LD_z_given_x": -0.10157632926602472,
+            "ld_mean": -2.4362823963165283,
+            "ld_std": 0.6302627921104431,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": 0.011331658142513216,
+            "corr_LD_x": -0.07395955230291011,
+            "partial_LD_z_given_x": 0.04511388906351524,
+            "ld_mean": -2.524350643157959,
+            "ld_std": 0.5790237188339233,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": -0.08761872213274452,
+            "corr_LD_x": 0.03199216195534411,
+            "partial_LD_z_given_x": -0.10991636624430913,
+            "ld_mean": -2.3890016078948975,
+            "ld_std": 0.7033485770225525,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": 0.055222800553411236,
+            "corr_LD_x": -0.08711615481603169,
+            "partial_LD_z_given_x": 0.09913482337482137,
+            "ld_mean": -2.5006086826324463,
+            "ld_std": 0.5978314280509949,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": -0.09377130970730602,
+            "corr_LD_x": 0.01627956727477396,
+            "partial_LD_z_given_x": -0.10967144947753503,
+            "ld_mean": -2.3159496784210205,
+            "ld_std": 0.781100332736969,
+            "n_x_pos_slope": 4,
+            "n_x_neg_slope": 6
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": 0.11324460678630818,
+            "corr_LD_x": -0.1810081354511622,
+            "partial_LD_z_given_x": 0.20698103753694777,
+            "ld_mean": -2.458603858947754,
+            "ld_std": 0.6046806573867798,
+            "n_x_pos_slope": 8,
+            "n_x_neg_slope": 2
+          }
+        }
+      }
+    },
+    {
+      "name": "gemma4-31b-it_n8_L56",
+      "model_id": "google/gemma-4-31B-it",
+      "model_short": "gemma4-31b-it",
+      "n_ref": 8,
+      "layer": 56,
+      "n_layers": 60,
+      "result": {
+        "n_train": 231,
+        "n_test": 154,
+        "n_missing": 0,
+        "primal_z_norm": 7.807083606719971,
+        "manifold_norm_mean": 12.846096467909918,
+        "settings": {
+          "baseline": {
+            "corr_LD_z": -0.06156464975789619,
+            "corr_LD_x": -0.17273239694830303,
+            "partial_LD_z_given_x": 0.009005215110959388,
+            "ld_mean": -2.3380682468414307,
+            "ld_std": 0.5966208577156067,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "manifold_a0.50": {
+            "corr_LD_z": -0.012854441796596163,
+            "corr_LD_x": -0.24722988936731083,
+            "partial_LD_z_given_x": 0.09798911266243648,
+            "ld_mean": -2.3555195331573486,
+            "ld_std": 0.6404550075531006,
+            "n_x_pos_slope": 6,
+            "n_x_neg_slope": 4
+          },
+          "proj_out_a0.50": {
+            "corr_LD_z": -0.04623195769768674,
+            "corr_LD_x": -0.22645446004475162,
+            "partial_LD_z_given_x": 0.05062593238538712,
+            "ld_mean": -2.323051929473877,
+            "ld_std": 0.6025516390800476,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "manifold_a0.75": {
+            "corr_LD_z": 0.03658515972699588,
+            "corr_LD_x": -0.219811167896665,
+            "partial_LD_z_given_x": 0.1403221844879956,
+            "ld_mean": -2.317573070526123,
+            "ld_std": 0.7371005415916443,
+            "n_x_pos_slope": 7,
+            "n_x_neg_slope": 3
+          },
+          "proj_out_a0.75": {
+            "corr_LD_z": -0.03583959730822626,
+            "corr_LD_x": -0.24056500012517715,
+            "partial_LD_z_given_x": 0.06891288319771227,
+            "ld_mean": -2.301542282104492,
+            "ld_std": 0.6134539246559143,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "manifold_a1.00": {
+            "corr_LD_z": 0.0718447234365961,
+            "corr_LD_x": -0.19879897995801182,
+            "partial_LD_z_given_x": 0.16954483462024478,
+            "ld_mean": -2.2571022510528564,
+            "ld_std": 0.8778184056282043,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          },
+          "proj_out_a1.00": {
+            "corr_LD_z": -0.034275326490168824,
+            "corr_LD_x": -0.25869464381911256,
+            "partial_LD_z_given_x": 0.07929053955096092,
+            "ld_mean": -2.256899356842041,
+            "ld_std": 0.6306788325309753,
+            "n_x_pos_slope": 5,
+            "n_x_neg_slope": 5
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "model": "google/gemma-2-2b",
+  "short": "gemma2-2b",
+  "feature": "height",
+  "k": 15,
+  "n_prompts": 990,
+  "n_cells": 8,
+  "selection_metric": "|cos(head writeout, d_primal)| (positive only)",
+  "cells": [
+    {
+      "layer": 16,
+      "head": 4,
+      "annotation": 0.7814042568206787
+    },
+    {
+      "layer": 0,
+      "head": 6,
+      "annotation": 0.6919728517532349
+    },
+    {
+      "layer": 22,
+      "head": 1,
+      "annotation": 0.6615117192268372
+    },
+    {
+      "layer": 1,
+      "head": 6,
+      "annotation": 0.6471316814422607
+    },
+    {
+      "layer": 1,
+      "head": 1,
+      "annotation": 0.609105110168457
+    },
+    {
+      "layer": 17,
+      "head": 7,
+      "annotation": 0.5891335606575012
+    },
+    {
+      "layer": 13,
+      "head": 2,
+      "annotation": 0.5505154728889465
+    },
+    {
+      "layer": 12,
+      "head": 4,
+      "annotation": 0.5179942846298218
+    }
+  ],
+  "baseline_r_LD_z": 0.9303684402409761,
+  "baseline_LD_mean": 1.1203283071517944,
+  "modes": {
+    "zero": {
+      "r_LD_z": 0.8896776733489086,
+      "delta_r": -0.04069076689206752,
+      "ld_mean": 0.9343434572219849,
+      "delta_ld_mean": -0.18598484992980957
+    },
+    "resample": {
+      "r_LD_z": 0.2057273588959056,
+      "delta_r": -0.7246410813450705,
+      "ld_mean": 1.1272727251052856,
+      "delta_ld_mean": 0.006944417953491211
+    },
+    "q_zero": {
+      "r_LD_z": 0.8711166445238869,
+      "delta_r": -0.05925179571708916,
+      "ld_mean": 0.8085858821868896,
+      "delta_ld_mean": -0.3117424249649048
+    }
+  }
+}

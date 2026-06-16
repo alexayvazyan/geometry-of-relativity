@@ -1,0 +1,219 @@
+{
+  "task": "neutral_text",
+  "model": "google/gemma-2-9b",
+  "short": "gemma2-9b",
+  "n_prompts": 499,
+  "label_key": null,
+  "high_word": null,
+  "low_word": null,
+  "space_prefix": false,
+  "high_id": -1,
+  "low_id": -1,
+  "baseline": {
+    "r_LD_label": null,
+    "ld_mean": null,
+    "ld_std": null
+  },
+  "runs": [
+    {
+      "label": "trio (L23H14+L26H4+L31H3)",
+      "cells": [
+        [
+          23,
+          14
+        ],
+        [
+          26,
+          4
+        ],
+        [
+          31,
+          3
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0016933172009885311,
+      "kl_total": 0.8449652791023254,
+      "kl_max": 0.04984521493315697
+    },
+    {
+      "label": "7-cell extended",
+      "cells": [
+        [
+          23,
+          14
+        ],
+        [
+          26,
+          4
+        ],
+        [
+          31,
+          3
+        ],
+        [
+          25,
+          7
+        ],
+        [
+          23,
+          15
+        ],
+        [
+          40,
+          6
+        ],
+        [
+          18,
+          3
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.003049284452572465,
+      "kl_total": 1.5215929746627808,
+      "kl_max": 0.09525513648986816
+    },
+    {
+      "label": "L23H14 hub alone",
+      "cells": [
+        [
+          23,
+          14
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0008286591619253159,
+      "kl_total": 0.41350093483924866,
+      "kl_max": 0.01738293655216694
+    },
+    {
+      "label": "random-3 #1 (L23H1+L29H8+L33H13)",
+      "cells": [
+        [
+          23,
+          1
+        ],
+        [
+          29,
+          8
+        ],
+        [
+          33,
+          13
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0023499666713178158,
+      "kl_total": 1.172633409500122,
+      "kl_max": 0.06756796687841415
+    },
+    {
+      "label": "random-3 #2 (L26H6+L30H9+L32H8)",
+      "cells": [
+        [
+          26,
+          6
+        ],
+        [
+          30,
+          9
+        ],
+        [
+          32,
+          8
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0016759242862462997,
+      "kl_total": 0.8362862467765808,
+      "kl_max": 0.02954816073179245
+    },
+    {
+      "label": "random-3 #3 (L20H8+L23H13+L32H2)",
+      "cells": [
+        [
+          20,
+          8
+        ],
+        [
+          23,
+          13
+        ],
+        [
+          32,
+          2
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0011218535946682096,
+      "kl_total": 0.5598049163818359,
+      "kl_max": 0.027929626405239105
+    },
+    {
+      "label": "random-3 #4 (L21H6+L26H11+L34H9)",
+      "cells": [
+        [
+          21,
+          6
+        ],
+        [
+          26,
+          11
+        ],
+        [
+          34,
+          9
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0019154722103849053,
+      "kl_total": 0.955820620059967,
+      "kl_max": 0.10710461437702179
+    },
+    {
+      "label": "random-3 #5 (L22H6+L24H3+L33H13)",
+      "cells": [
+        [
+          22,
+          6
+        ],
+        [
+          24,
+          3
+        ],
+        [
+          33,
+          13
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0025895354337990284,
+      "kl_total": 1.2921781539916992,
+      "kl_max": 0.06804529577493668
+    }
+  ]
+}

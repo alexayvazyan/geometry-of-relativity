@@ -1,0 +1,37 @@
+{
+  "model_short": "gemma2-2b",
+  "layer": 20,
+  "pairs": [
+    "height",
+    "age",
+    "weight",
+    "size",
+    "speed",
+    "wealth",
+    "experience",
+    "bmi_abs"
+  ],
+  "pairwise_cos_mean": 0.5598500135816638,
+  "published_pairwise_cos_mean": 0.559,
+  "cos_w_shared_proc_vs_primal": {
+    "height": 0.8890935231262449,
+    "age": 0.7827316586727722,
+    "weight": 0.8977120929574867,
+    "size": 0.810812278339772,
+    "speed": 0.6979774820617259,
+    "wealth": 0.7399970086147927,
+    "experience": 0.7185126980812391,
+    "bmi_abs": 0.7241852333079607
+  },
+  "published_cos_w_shared_proc_vs_primal": {
+    "height": 0.8887,
+    "age": 0.7816,
+    "weight": 0.897,
+    "size": 0.8107,
+    "speed": 0.6983,
+    "wealth": 0.7397,
+    "experience": 0.7183,
+    "bmi_abs": 0.7245
+  },
+  "pairs_differing_geq_0p05": 0
+}

@@ -1,0 +1,219 @@
+{
+  "task": "neutral_text",
+  "model": "google/gemma-2-2b-it",
+  "short": "gemma2-2b-it",
+  "n_prompts": 499,
+  "label_key": null,
+  "high_word": null,
+  "low_word": null,
+  "space_prefix": false,
+  "high_id": -1,
+  "low_id": -1,
+  "baseline": {
+    "r_LD_label": null,
+    "ld_mean": null,
+    "ld_std": null
+  },
+  "runs": [
+    {
+      "label": "trio (L16H4+L17H7+L14H2)",
+      "cells": [
+        [
+          16,
+          4
+        ],
+        [
+          17,
+          7
+        ],
+        [
+          14,
+          2
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.008802633732557297,
+      "kl_total": 4.392514228820801,
+      "kl_max": 0.2950746715068817
+    },
+    {
+      "label": "7-cell extended",
+      "cells": [
+        [
+          16,
+          4
+        ],
+        [
+          17,
+          7
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          17,
+          6
+        ],
+        [
+          22,
+          1
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          13,
+          2
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.012693844735622406,
+      "kl_total": 6.334228515625,
+      "kl_max": 0.31160831451416016
+    },
+    {
+      "label": "L16H4 hub alone",
+      "cells": [
+        [
+          16,
+          4
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.0033855605870485306,
+      "kl_total": 1.6893947124481201,
+      "kl_max": 0.0703292116522789
+    },
+    {
+      "label": "random-3 #1 (L15H3+L21H3+L22H0)",
+      "cells": [
+        [
+          15,
+          3
+        ],
+        [
+          21,
+          3
+        ],
+        [
+          22,
+          0
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.006212527863681316,
+      "kl_total": 3.1000514030456543,
+      "kl_max": 0.4862864911556244
+    },
+    {
+      "label": "random-3 #2 (L18H7+L19H2+L20H2)",
+      "cells": [
+        [
+          18,
+          7
+        ],
+        [
+          19,
+          2
+        ],
+        [
+          20,
+          2
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.006942906882613897,
+      "kl_total": 3.464510440826416,
+      "kl_max": 0.11039368808269501
+    },
+    {
+      "label": "random-3 #3 (L12H5+L15H3+L16H1)",
+      "cells": [
+        [
+          12,
+          5
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          16,
+          1
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.009499477222561836,
+      "kl_total": 4.740239143371582,
+      "kl_max": 0.14458350837230682
+    },
+    {
+      "label": "random-3 #4 (L12H0+L13H5+L19H1)",
+      "cells": [
+        [
+          12,
+          0
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          19,
+          1
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.003087142948061228,
+      "kl_total": 1.5404843091964722,
+      "kl_max": 0.041125260293483734
+    },
+    {
+      "label": "random-3 #5 (L14H6+L16H3+L17H2)",
+      "cells": [
+        [
+          14,
+          6
+        ],
+        [
+          16,
+          3
+        ],
+        [
+          17,
+          2
+        ]
+      ],
+      "r_LD_label": null,
+      "delta_r": null,
+      "ld_mean": null,
+      "ld_std": null,
+      "kl_mean": 0.013512317091226578,
+      "kl_total": 6.742646217346191,
+      "kl_max": 0.25539958477020264
+    }
+  ]
+}

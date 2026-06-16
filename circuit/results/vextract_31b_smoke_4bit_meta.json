@@ -1,0 +1,15 @@
+{
+  "model_id": "google/gemma-4-31B-it",
+  "model_short": "gemma4-31b-it",
+  "n_stimuli": 8,
+  "n_layers": 60,
+  "d_model": 5376,
+  "high_word": "big",
+  "low_word": "small",
+  "high_id": 2563,
+  "low_id": 1944,
+  "prompt": "The square in the last image is",
+  "stim_path": "/home/alexander/research_projects/relativity_ablation/stimuli/vsize_n4/stimuli.jsonl",
+  "decoder_layers_path": "model.language_model.layers",
+  "elapsed_sec": 7.6
+}

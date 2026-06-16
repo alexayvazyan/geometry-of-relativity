@@ -1,0 +1,52 @@
+{
+  "model": "google/gemma-2-2b",
+  "short": "gemma2-2b",
+  "feature": "height",
+  "k": 15,
+  "layer": 1,
+  "baseline_r_LD_z": 0.9303684402409761,
+  "baseline_LD_mean": 1.1203283071517944,
+  "ablations": [
+    {
+      "feat_idx": 7428,
+      "n_active_prompts": 990,
+      "r_LD_z_ablated": 0.9290446051134629,
+      "delta_r": -0.0013238351275132176,
+      "delta_LD_mean": 0.0030303001403808594
+    },
+    {
+      "feat_idx": 3832,
+      "n_active_prompts": 990,
+      "r_LD_z_ablated": 0.929503096459661,
+      "delta_r": -0.0008653437813150866,
+      "delta_LD_mean": 0.0018938779830932617
+    },
+    {
+      "feat_idx": 12108,
+      "n_active_prompts": 990,
+      "r_LD_z_ablated": 0.9296233816620684,
+      "delta_r": -0.0007450585789077202,
+      "delta_LD_mean": 0.0002524852752685547
+    },
+    {
+      "feat_idx": 15549,
+      "n_active_prompts": 990,
+      "r_LD_z_ablated": 0.9294288491914219,
+      "delta_r": -0.0009395910495542115,
+      "delta_LD_mean": 0.002777695655822754
+    },
+    {
+      "feat_idx": 15873,
+      "n_active_prompts": 990,
+      "r_LD_z_ablated": 0.929128211167117,
+      "delta_r": -0.0012402290738591226,
+      "delta_LD_mean": 0.0030303001403808594
+    }
+  ],
+  "zero_head": {
+    "head": 6,
+    "r_LD_z": 0.9303586716564233,
+    "delta_r": -9.76858455281615e-06,
+    "delta_LD_mean": 0.0
+  }
+}

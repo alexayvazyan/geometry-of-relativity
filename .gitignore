@@ -37,3 +37,8 @@ logs/
 .idea/
 .vscode/
 *.swp
+
+# Generated circuit figures (final copies live in paper/figures/)
+circuit/figures/
+circuit/scripts/__pycache__/
+internal/**/__pycache__/
