@@ -1,0 +1,39 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# Large binary model artifacts — fetched from the HF activations dataset, never committed
+*.safetensors
+*.pkl
+*.npz
+*.pt
+
+# LaTeX build artifacts
+paper/main.pdf
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.log
+paper/*.out
+paper/build_run.txt
+
+# Local session artifacts
+logs/
+.hf_home/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
