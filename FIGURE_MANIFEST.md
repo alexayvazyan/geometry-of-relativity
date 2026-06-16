@@ -12,7 +12,14 @@ from the `% Source ...` comments in `paper/main.tex` (authoritative).
   are fetched from Hugging Face so the plot step still works without a GPU.
 
 Origin root: **G** = `geometry-of-relativity/` (behavioral + geometry), **A** = `relativity_ablation/`
-(attention circuit). Both are being consolidated into this repo.
+(attention circuit), now consolidated here.
+
+**Drivers (run by `make figures`):** `figures/build_paper_result_figures.py` regenerates the
+behavioral `fig_results_*`; `figures/build_circuit_figures.py` regenerates the section-5 `p2*` and
+`xmodel` figures from `circuit/results/`. Committed-asset exceptions (not regenerated): the
+`candidate_5` pipeline schematic (hand-made), `p2a_ld_vs_z_height_gemma2-9b_2x3.png` (phase
+pipeline), and `fig_results_shared_direction_own_loo_abs_slopes_z_vs_x.png` (filename drifted from
+its `run_v15` generator).
 
 | Paper float | Asset (`paper/figures/…`) | Source artifact | Generating code | Tier | Root |
 |---|---|---|---|---|---|
