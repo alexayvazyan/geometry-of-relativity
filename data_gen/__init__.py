@@ -9,6 +9,7 @@ from .prompts import (
     fmt_num,
     make_explicit_prompt,
     make_implicit_prompt,
+    make_naturalistic_prompt,
     make_zero_shot_prompt,
     sample_context,
 )

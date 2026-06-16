@@ -206,3 +206,72 @@ def make_explicit_prompt(pair: Pair, x: float, mu: float) -> str:
 
 def make_zero_shot_prompt(pair: Pair, x: float) -> str:
     return pair.format_prompt_zero.format(x_str=fmt_num(x))
+
+
+# ============================ Naturalistic frames (Workstream B) ============================
+# Realistic-prose variants of the implicit-list frame. The SAME sampled context values are rendered
+# with named people in a believable scenario, ending at the same adjective cliff ("... is"), so
+# (x, z, mu, sigma) are identical to make_implicit_prompt and only the surface naturalism changes.
+# Used to test whether z-dominance survives off the toy "Person i: 150 cm" format.
+
+_NAMES = (
+    "Maya", "Liam", "Aisha", "Diego", "Hannah", "Omar", "Yuki", "Sofia", "Noah", "Priya",
+    "Ethan", "Zara", "Lucas", "Nina", "Ravi", "Chloe", "Mateo", "Leah", "Kai", "Amara",
+    "Theo", "Iris", "Dani", "Bex",
+)
+
+# per-domain scenario: g=group noun, item=per-person clause, target=closing clause ending at "is".
+_NATURALISTIC: dict[str, dict[str, str]] = {
+    "height":     {"g": "the varsity basketball squad", "item": "{n} is {v} cm",
+                   "target": "{n}, who just joined {g}, is {x} cm. Compared with the squad, {n} is"},
+    "age":        {"g": "the hiking club", "item": "{n} is {v}",
+                   "target": "{n}, a new member of {g}, is {x}. Compared with the club, {n} is"},
+    "weight":     {"g": "the rowing crew", "item": "{n} weighs {v} kg",
+                   "target": "{n}, the newest member of {g}, weighs {x} kg. For the crew, {n} is"},
+    "size":       {"g": "a batch of components", "item": "one part is {v} cm across",
+                   "target": "a new part in {g} is {x} cm across. For this batch, it is"},
+    "speed":      {"g": "this afternoon's heat", "item": "{n}'s car clocked {v} km/h",
+                   "target": "a late entrant in {g} clocked {x} km/h. For this heat, that car is"},
+    "wealth":     {"g": "the engineering team", "item": "{n} earns ${v} a year",
+                   "target": "{n}, a new hire on {g}, earns ${x} a year. Compared with the team, {n} is"},
+    "experience": {"g": "the studio", "item": "{n} has {v} years of experience",
+                   "target": "{n}, who just joined {g}, has {x} years of experience. For the studio, {n} is"},
+    "bmi_abs":    {"g": "a group of patients", "item": "{n} has a BMI of {v}",
+                   "target": "{n}, a new patient in {g}, has a BMI of {x}. Among the group, {n} is"},
+}
+
+# Neutral target clauses: same naturalistic named-prose, but no attribute-priming scenario, so the
+# only difference from the primed frame is the world-knowledge context (B3 control).
+_NAT_NEUTRAL_TARGET: dict[str, str] = {
+    "height":     "{n} is {x} cm. Compared with the others, {n} is",
+    "age":        "{n} is {x}. Compared with the others, {n} is",
+    "weight":     "{n} weighs {x} kg. Compared with the others, {n} is",
+    "size":       "a new part is {x} cm across. Compared with the rest, it is",
+    "speed":      "{n}'s car clocked {x} km/h. Compared with the others, that car is",
+    "wealth":     "{n} earns ${x} a year. Compared with the others, {n} is",
+    "experience": "{n} has {x} years of experience. Compared with the others, {n} is",
+    "bmi_abs":    "{n} has a BMI of {x}. Compared with the others, {n} is",
+}
+
+
+def _nat_value(pair: Pair, v: float) -> str:
+    return f"{v:.1f}" if pair.name == "bmi_abs" else str(int(v))
+
+
+def make_naturalistic_prompt(pair: Pair, x: float, mu: float, seed: int, k: int = 15,
+                             style: str = "primed", return_context: bool = False):
+    """Naturalistic-prose version of make_implicit_prompt: identical sampled context, named entities,
+    ending at the same '... is' adjective cliff. style='primed' uses an attribute-relevant scenario
+    (e.g. a basketball squad for height); style='neutral' drops the priming scenario."""
+    cfg = _NATURALISTIC[pair.name]
+    low, high = _sample_bounds(pair)
+    sample = sample_context(mu, pair.sigma, seed, n=k, low=low, high=high,
+                            log_space=(pair.name in LOG_SPACE_PAIRS))
+    names = list(_NAMES)
+    random.Random(seed).shuffle(names)
+    items = [cfg["item"].format(n=names[i % len(names)], v=_nat_value(pair, v))
+             for i, v in enumerate(sample)]
+    target_name = names[k % len(names)]
+    target_tmpl = cfg["target"] if style == "primed" else _NAT_NEUTRAL_TARGET[pair.name]
+    body = ". ".join(items) + ".\n" + target_tmpl.format(n=target_name, x=fmt_num(x), g=cfg["g"])
+    return (body, [float(v) for v in sample]) if return_context else body

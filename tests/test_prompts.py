@@ -42,6 +42,20 @@ def test_wealth_logspace_z():
     assert abs(P.derive_mu(w, 200000, z) - 100000) < 1e-6
 
 
+def test_naturalistic_frames():
+    h = P.PAIRS_BY_NAME["height"]
+    primed = P.make_naturalistic_prompt(h, 170, 160, 3, k=6, style="primed")
+    neutral = P.make_naturalistic_prompt(h, 170, 160, 3, k=6, style="neutral")
+    # same '...is' cliff as the toy frame
+    assert primed.endswith(" is") and neutral.endswith(" is")
+    # only the primed frame carries the attribute-priming scenario
+    assert "basketball" in primed and "basketball" not in neutral
+    # identical sampled context underneath (same seed -> same values appear in both)
+    assert "161 cm" in primed and "161 cm" in neutral
+    _, ctx = P.make_naturalistic_prompt(h, 170, 160, 3, k=6, style="neutral", return_context=True)
+    assert len(ctx) == 6
+
+
 def test_derive_mu_roundtrip_all_pairs():
     for p in P.PAIRS:
         x, mu = p.target_values[2], p.mu_values[1]
