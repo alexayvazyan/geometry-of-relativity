@@ -1,0 +1,1014 @@
+{
+  "model_id": "google/gemma-2-9b",
+  "model_short": "gemma2-9b",
+  "pairs": [
+    "height",
+    "age",
+    "weight",
+    "size",
+    "speed",
+    "wealth",
+    "experience",
+    "bmi_abs"
+  ],
+  "context_n": 31,
+  "layers": [
+    0,
+    1,
+    3,
+    5,
+    7,
+    10,
+    13,
+    14,
+    17,
+    21,
+    25,
+    29,
+    33,
+    37,
+    41
+  ],
+  "direction_definitions": {
+    "primal_z": "E[h_L | z > 1] - E[h_L | z < -1]",
+    "primal_x": "E[h_L | x >= pair 75th percentile] - E[h_L | x <= pair 25th percentile]"
+  },
+  "by_pair_layer": {
+    "height": {
+      "0": {
+        "cv_r2_z": -0.002954841309902534,
+        "cv_r2_x": -0.05594310326208718,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.012369791977107525,
+        "primal_x_steering_slope": -0.012369791977107525
+      },
+      "1": {
+        "cv_r2_z": 0.4332757905370864,
+        "cv_r2_x": 0.085888801609172,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": -0.0026041667442768812,
+        "primal_x_steering_slope": 0.0008680555620230734
+      },
+      "3": {
+        "cv_r2_z": 0.43606595620866495,
+        "cv_r2_x": 0.12458319825218578,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": -0.004123263992369175,
+        "primal_x_steering_slope": -0.001953125
+      },
+      "5": {
+        "cv_r2_z": 0.5872182821888727,
+        "cv_r2_x": 0.24664006968418128,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": -0.0065104165114462376,
+        "primal_x_steering_slope": 0.003689236007630825
+      },
+      "7": {
+        "cv_r2_z": 0.6307466038188548,
+        "cv_r2_x": 0.4138649728759859,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": -0.00542534701526165,
+        "primal_x_steering_slope": 0.00737847201526165
+      },
+      "10": {
+        "cv_r2_z": 0.8082467668803459,
+        "cv_r2_x": 0.8013305020182283,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": -0.0088975690305233,
+        "primal_x_steering_slope": 0.007595486007630825
+      },
+      "13": {
+        "cv_r2_z": 0.9505267515256937,
+        "cv_r2_x": 0.9242473393731233,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": -0.00542534701526165,
+        "primal_x_steering_slope": 0.013020833022892475
+      },
+      "14": {
+        "cv_r2_z": 0.9531666797625368,
+        "cv_r2_x": 0.93860336169834,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.009114583022892475,
+        "primal_x_steering_slope": 0.0065104165114462376
+      },
+      "17": {
+        "cv_r2_z": 0.9426874899208431,
+        "cv_r2_x": 0.874627524203248,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.011501736007630825,
+        "primal_x_steering_slope": -0.0008680555620230734
+      },
+      "21": {
+        "cv_r2_z": 0.9240248977348913,
+        "cv_r2_x": 0.7920729406732083,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.0373263880610466,
+        "primal_x_steering_slope": 0.0015190972480922937
+      },
+      "25": {
+        "cv_r2_z": 0.9428882109677158,
+        "cv_r2_x": 0.7645657059414205,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.0779079869389534,
+        "primal_x_steering_slope": 0.0023871527519077063
+      },
+      "29": {
+        "cv_r2_z": 0.9425855876751191,
+        "cv_r2_x": 0.806980798733975,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.0496961809694767,
+        "primal_x_steering_slope": 0.005859375
+      },
+      "33": {
+        "cv_r2_z": 0.9399937488379705,
+        "cv_r2_x": 0.8425817824238377,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.0462239570915699,
+        "primal_x_steering_slope": 0.008029513992369175
+      },
+      "37": {
+        "cv_r2_z": 0.9371251714060093,
+        "cv_r2_x": 0.8457867091164517,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.0379774309694767,
+        "primal_x_steering_slope": 0.00390625
+      },
+      "41": {
+        "cv_r2_z": 0.925502392034427,
+        "cv_r2_x": 0.8715630382894277,
+        "x_low_quantile": 156.025,
+        "x_high_quantile": 173.975,
+        "primal_z_steering_slope": 0.025390625,
+        "primal_x_steering_slope": 0.004123263992369175
+      }
+    },
+    "age": {
+      "0": {
+        "cv_r2_z": -0.03459749929423572,
+        "cv_r2_x": 0.07273192254953276,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": -0.0008680555620230734,
+        "primal_x_steering_slope": 0.0010850694961845875
+      },
+      "1": {
+        "cv_r2_z": -0.023500506755604,
+        "cv_r2_x": 0.1682839015083052,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.0023871527519077063,
+        "primal_x_steering_slope": -0.0071614584885537624
+      },
+      "3": {
+        "cv_r2_z": -0.004993705191478792,
+        "cv_r2_x": 0.36562946641784433,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.0049913194961845875,
+        "primal_x_steering_slope": -0.0108506940305233
+      },
+      "5": {
+        "cv_r2_z": 0.08100134005289872,
+        "cv_r2_x": 0.6275062234193701,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.008463541977107525,
+        "primal_x_steering_slope": -0.013454861007630825
+      },
+      "7": {
+        "cv_r2_z": 0.18189235440557106,
+        "cv_r2_x": 0.7587137202814496,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.0217013880610466,
+        "primal_x_steering_slope": -0.01019965298473835
+      },
+      "10": {
+        "cv_r2_z": 0.6829275337464877,
+        "cv_r2_x": 0.951699017625471,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.01953125,
+        "primal_x_steering_slope": -0.0203993059694767
+      },
+      "13": {
+        "cv_r2_z": 0.937027231270791,
+        "cv_r2_x": 0.9815301626449251,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.0069444444961845875,
+        "primal_x_steering_slope": -0.0034722222480922937
+      },
+      "14": {
+        "cv_r2_z": 0.9362201515427714,
+        "cv_r2_x": 0.9826867036966149,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.008463541977107525,
+        "primal_x_steering_slope": -0.0015190972480922937
+      },
+      "17": {
+        "cv_r2_z": 0.9142727515735868,
+        "cv_r2_x": 0.9603857881910504,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.005859375,
+        "primal_x_steering_slope": -0.0069444444961845875
+      },
+      "21": {
+        "cv_r2_z": 0.9481610620207622,
+        "cv_r2_x": 0.9601647719686588,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.0377604179084301,
+        "primal_x_steering_slope": -0.00542534701526165
+      },
+      "25": {
+        "cv_r2_z": 0.9485007214144269,
+        "cv_r2_x": 0.9704302896479147,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.083984375,
+        "primal_x_steering_slope": -0.0034722222480922937
+      },
+      "29": {
+        "cv_r2_z": 0.9638000408188977,
+        "cv_r2_x": 0.9767336208129834,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.0557725690305233,
+        "primal_x_steering_slope": -0.0047743055038154125
+      },
+      "33": {
+        "cv_r2_z": 0.9587699080344768,
+        "cv_r2_x": 0.9804540866284747,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.05078125,
+        "primal_x_steering_slope": -0.0008680555620230734
+      },
+      "37": {
+        "cv_r2_z": 0.9535265406681256,
+        "cv_r2_x": 0.9777768996038875,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.0399305559694767,
+        "primal_x_steering_slope": -0.00021701389050576836
+      },
+      "41": {
+        "cv_r2_z": 0.9560960122750286,
+        "cv_r2_x": 0.9766099628093019,
+        "x_low_quantile": 28.6,
+        "x_high_quantile": 53.9,
+        "primal_z_steering_slope": 0.02278645895421505,
+        "primal_x_steering_slope": 0.00021701389050576836
+      }
+    },
+    "weight": {
+      "0": {
+        "cv_r2_z": 0.062250101292512405,
+        "cv_r2_x": 0.12345728388273747,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.0045572915114462376,
+        "primal_x_steering_slope": -0.0088975690305233
+      },
+      "1": {
+        "cv_r2_z": 0.08731094222403846,
+        "cv_r2_x": 0.18301134182286882,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": -0.0028211805038154125,
+        "primal_x_steering_slope": 0.011067708022892475
+      },
+      "3": {
+        "cv_r2_z": 0.1161228226575215,
+        "cv_r2_x": 0.3758700568248873,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": -0.0067274305038154125,
+        "primal_x_steering_slope": -0.0017361111240461469
+      },
+      "5": {
+        "cv_r2_z": 0.2625039674954073,
+        "cv_r2_x": 0.6106668663954566,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": -0.008029513992369175,
+        "primal_x_steering_slope": 0.0049913194961845875
+      },
+      "7": {
+        "cv_r2_z": 0.33378882629489837,
+        "cv_r2_x": 0.6838974634343962,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.002170138992369175,
+        "primal_x_steering_slope": 0.002170138992369175
+      },
+      "10": {
+        "cv_r2_z": 0.603016965900303,
+        "cv_r2_x": 0.8348647732491802,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": -0.01019965298473835,
+        "primal_x_steering_slope": 0.0158420130610466
+      },
+      "13": {
+        "cv_r2_z": 0.9073789483888083,
+        "cv_r2_x": 0.9561855626115827,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": -0.0004340277810115367,
+        "primal_x_steering_slope": 0.03515625
+      },
+      "14": {
+        "cv_r2_z": 0.9191407697456285,
+        "cv_r2_x": 0.9618124100858636,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": -0.0045572915114462376,
+        "primal_x_steering_slope": 0.0329861119389534
+      },
+      "17": {
+        "cv_r2_z": 0.940703282784186,
+        "cv_r2_x": 0.9355220908312822,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.0108506940305233,
+        "primal_x_steering_slope": 0.01801215298473835
+      },
+      "21": {
+        "cv_r2_z": 0.9494932049693455,
+        "cv_r2_x": 0.8855199712556419,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.04296875,
+        "primal_x_steering_slope": 0.02278645895421505
+      },
+      "25": {
+        "cv_r2_z": 0.9453420765541419,
+        "cv_r2_x": 0.8430994336603688,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.0833333358168602,
+        "primal_x_steering_slope": 0.0069444444961845875
+      },
+      "29": {
+        "cv_r2_z": 0.9461710380330256,
+        "cv_r2_x": 0.9040240441274872,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.0553385429084301,
+        "primal_x_steering_slope": 0.0023871527519077063
+      },
+      "33": {
+        "cv_r2_z": 0.9410382998847356,
+        "cv_r2_x": 0.9151265494435372,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.0540364570915699,
+        "primal_x_steering_slope": -0.001953125
+      },
+      "37": {
+        "cv_r2_z": 0.9471920125181593,
+        "cv_r2_x": 0.916889837872965,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.0544704869389534,
+        "primal_x_steering_slope": -0.00390625
+      },
+      "41": {
+        "cv_r2_z": 0.9467617932216239,
+        "cv_r2_x": 0.928497366092121,
+        "x_low_quantile": 60.0,
+        "x_high_quantile": 90.0,
+        "primal_z_steering_slope": 0.0381944440305233,
+        "primal_x_steering_slope": 0.0017361111240461469
+      }
+    },
+    "size": {
+      "0": {
+        "cv_r2_z": -0.036338351348725206,
+        "cv_r2_x": 0.02585338788980296,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": -0.039772726595401764,
+        "primal_x_steering_slope": 0.08735795319080353
+      },
+      "1": {
+        "cv_r2_z": -0.039656185977710035,
+        "cv_r2_x": 0.15681669470287007,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.01657196879386902,
+        "primal_x_steering_slope": -0.04095643758773804
+      },
+      "3": {
+        "cv_r2_z": -0.036014859720261194,
+        "cv_r2_x": 0.32302867495623355,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": -0.007102272938936949,
+        "primal_x_steering_slope": -0.12026514858007431
+      },
+      "5": {
+        "cv_r2_z": -0.020776047068736814,
+        "cv_r2_x": 0.5867250759305105,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.13612689077854156,
+        "primal_x_steering_slope": -0.07386363297700882
+      },
+      "7": {
+        "cv_r2_z": -0.010728639572329168,
+        "cv_r2_x": 0.7028461873896428,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.07954545319080353,
+        "primal_x_steering_slope": -0.013967802748084068
+      },
+      "10": {
+        "cv_r2_z": 0.2037120955249314,
+        "cv_r2_x": 0.789674243762268,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.019176136702299118,
+        "primal_x_steering_slope": -0.08877840638160706
+      },
+      "13": {
+        "cv_r2_z": 0.753715232781343,
+        "cv_r2_x": 0.9203605883136482,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": -0.0014204545877873898,
+        "primal_x_steering_slope": -0.017045455053448677
+      },
+      "14": {
+        "cv_r2_z": 0.7655355634382461,
+        "cv_r2_x": 0.9242868755320114,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": -0.017518939450383186,
+        "primal_x_steering_slope": -0.07623106241226196
+      },
+      "17": {
+        "cv_r2_z": 0.9604230881138408,
+        "cv_r2_x": 0.9462181624742497,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.04521780461072922,
+        "primal_x_steering_slope": -0.013494318351149559
+      },
+      "21": {
+        "cv_r2_z": 0.9464891549912509,
+        "cv_r2_x": 0.9323144000638426,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.052320074290037155,
+        "primal_x_steering_slope": 0.0026041667442768812
+      },
+      "25": {
+        "cv_r2_z": 0.9695082353862972,
+        "cv_r2_x": 0.9254931512569287,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.10440340638160706,
+        "primal_x_steering_slope": 0.05871212109923363
+      },
+      "29": {
+        "cv_r2_z": 0.9767199181529264,
+        "cv_r2_x": 0.9369912349139045,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.08617424219846725,
+        "primal_x_steering_slope": 0.04782196879386902
+      },
+      "33": {
+        "cv_r2_z": 0.9765205824995724,
+        "cv_r2_x": 0.943112104594666,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.08664772659540176,
+        "primal_x_steering_slope": 0.04640151560306549
+      },
+      "37": {
+        "cv_r2_z": 0.9718243620446367,
+        "cv_r2_x": 0.9514112924235798,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.07717803120613098,
+        "primal_x_steering_slope": 0.04024621099233627
+      },
+      "41": {
+        "cv_r2_z": 0.9644692859493218,
+        "cv_r2_x": 0.9578990222178877,
+        "x_low_quantile": 24.4,
+        "x_high_quantile": 51.8,
+        "primal_z_steering_slope": 0.051846589893102646,
+        "primal_x_steering_slope": 0.02296401560306549
+      }
+    },
+    "speed": {
+      "0": {
+        "cv_r2_z": 0.0041370238204863075,
+        "cv_r2_x": 0.3480720348630697,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.015158582478761673,
+        "primal_x_steering_slope": -0.027285447344183922
+      },
+      "1": {
+        "cv_r2_z": 0.016411063752352684,
+        "cv_r2_x": 0.5140098820196516,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": -0.0016324627213180065,
+        "primal_x_steering_slope": 0.0013992537278681993
+      },
+      "3": {
+        "cv_r2_z": 0.045422412851185645,
+        "cv_r2_x": 0.6196820956689623,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.014925372786819935,
+        "primal_x_steering_slope": -0.014458955265581608
+      },
+      "5": {
+        "cv_r2_z": 0.07820095389088055,
+        "cv_r2_x": 0.7399793217194282,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.015158582478761673,
+        "primal_x_steering_slope": -0.01049440260976553
+      },
+      "7": {
+        "cv_r2_z": 0.15226434544470624,
+        "cv_r2_x": 0.7869797755689251,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.012126865796744823,
+        "primal_x_steering_slope": 0.003031716449186206
+      },
+      "10": {
+        "cv_r2_z": 0.5969459387284053,
+        "cv_r2_x": 0.9130561514556845,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.0048973881639540195,
+        "primal_x_steering_slope": 0.02028917893767357
+      },
+      "13": {
+        "cv_r2_z": 0.9103454174952672,
+        "cv_r2_x": 0.9788986438978721,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.02915111929178238,
+        "primal_x_steering_slope": 0.027518656104803085
+      },
+      "14": {
+        "cv_r2_z": 0.9429687377808307,
+        "cv_r2_x": 0.9875973319769215,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.01982276141643524,
+        "primal_x_steering_slope": 0.0251865666359663
+      },
+      "17": {
+        "cv_r2_z": 0.9582169580624444,
+        "cv_r2_x": 0.988036527814393,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.017257463186979294,
+        "primal_x_steering_slope": 0.030317164957523346
+      },
+      "21": {
+        "cv_r2_z": 0.9468284040854293,
+        "cv_r2_x": 0.9781312877314328,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.054570894688367844,
+        "primal_x_steering_slope": 0.050606343895196915
+      },
+      "25": {
+        "cv_r2_z": 0.9422211325317129,
+        "cv_r2_x": 0.9718031692478835,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.09118469804525375,
+        "primal_x_steering_slope": 0.078125
+      },
+      "29": {
+        "cv_r2_z": 0.9483706815879197,
+        "cv_r2_x": 0.9722004703195416,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.05970149114727974,
+        "primal_x_steering_slope": 0.0503731332719326
+      },
+      "33": {
+        "cv_r2_z": 0.9433142475035126,
+        "cv_r2_x": 0.9701512621952478,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.06459888070821762,
+        "primal_x_steering_slope": 0.052705224603414536
+      },
+      "37": {
+        "cv_r2_z": 0.9473293747226664,
+        "cv_r2_x": 0.9722227296475581,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.0503731332719326,
+        "primal_x_steering_slope": 0.04151119291782379
+      },
+      "41": {
+        "cv_r2_z": 0.9502022552142851,
+        "cv_r2_x": 0.9685009802916643,
+        "x_low_quantile": 60.4,
+        "x_high_quantile": 130.2,
+        "primal_z_steering_slope": 0.03194962814450264,
+        "primal_x_steering_slope": 0.022154850885272026
+      }
+    },
+    "wealth": {
+      "0": {
+        "cv_r2_z": 0.1769523809586152,
+        "cv_r2_x": 0.23108269468198273,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.00434027798473835,
+        "primal_x_steering_slope": 0.0034722222480922937
+      },
+      "1": {
+        "cv_r2_z": 0.2098944755097496,
+        "cv_r2_x": 0.2708528111763323,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": -0.005642361007630825,
+        "primal_x_steering_slope": 0.00434027798473835
+      },
+      "3": {
+        "cv_r2_z": 0.26156943374314834,
+        "cv_r2_x": 0.31842801929546993,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": -0.017578125,
+        "primal_x_steering_slope": 0.0347222238779068
+      },
+      "5": {
+        "cv_r2_z": 0.3570863016579474,
+        "cv_r2_x": 0.42500962341893844,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.0015190972480922937,
+        "primal_x_steering_slope": 0.004123263992369175
+      },
+      "7": {
+        "cv_r2_z": 0.5133272904941597,
+        "cv_r2_x": 0.5484779364065744,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.015625,
+        "primal_x_steering_slope": -0.02473958395421505
+      },
+      "10": {
+        "cv_r2_z": 0.8824247739503517,
+        "cv_r2_x": 0.8621667522143771,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.01996527798473835,
+        "primal_x_steering_slope": -0.008463541977107525
+      },
+      "13": {
+        "cv_r2_z": 0.9419392450664205,
+        "cv_r2_x": 0.870501211948387,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.02973090298473835,
+        "primal_x_steering_slope": -0.014973958022892475
+      },
+      "14": {
+        "cv_r2_z": 0.9442135690457037,
+        "cv_r2_x": 0.8820882072011951,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.02886284701526165,
+        "primal_x_steering_slope": -0.003689236007630825
+      },
+      "17": {
+        "cv_r2_z": 0.9746275016166526,
+        "cv_r2_x": 0.863285338220401,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.0496961809694767,
+        "primal_x_steering_slope": 0.02083333395421505
+      },
+      "21": {
+        "cv_r2_z": 0.9579875413936033,
+        "cv_r2_x": 0.8218457533514506,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.0822482630610466,
+        "primal_x_steering_slope": 0.0186631940305233
+      },
+      "25": {
+        "cv_r2_z": 0.9520032008485717,
+        "cv_r2_x": 0.7911430884254858,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.1078559011220932,
+        "primal_x_steering_slope": 0.0184461809694767
+      },
+      "29": {
+        "cv_r2_z": 0.9536790120014167,
+        "cv_r2_x": 0.7640332497338627,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.0692274272441864,
+        "primal_x_steering_slope": 0.012369791977107525
+      },
+      "33": {
+        "cv_r2_z": 0.9535037695070743,
+        "cv_r2_x": 0.7489296215081,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.0616319440305233,
+        "primal_x_steering_slope": 0.00824652798473835
+      },
+      "37": {
+        "cv_r2_z": 0.9405613389764401,
+        "cv_r2_x": 0.7334456301673531,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.0536024309694767,
+        "primal_x_steering_slope": 0.0067274305038154125
+      },
+      "41": {
+        "cv_r2_z": 0.9287764071850622,
+        "cv_r2_x": 0.7750965945527433,
+        "x_low_quantile": 39814.0,
+        "x_high_quantile": 319329.75,
+        "primal_z_steering_slope": 0.0366753488779068,
+        "primal_x_steering_slope": 0.0049913194961845875
+      }
+    },
+    "experience": {
+      "0": {
+        "cv_r2_z": -0.029179910389649066,
+        "cv_r2_x": 0.10030215636005713,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.0074218749068677425,
+        "primal_x_steering_slope": -0.012500000186264515
+      },
+      "1": {
+        "cv_r2_z": 0.08609660375241535,
+        "cv_r2_x": 0.1556453070391186,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.004817708395421505,
+        "primal_x_steering_slope": -0.0010416667209938169
+      },
+      "3": {
+        "cv_r2_z": 0.09274961411613669,
+        "cv_r2_x": 0.24827022618832884,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": -0.03463541716337204,
+        "primal_x_steering_slope": 0.02239583246409893
+      },
+      "5": {
+        "cv_r2_z": 0.12421164401652673,
+        "cv_r2_x": 0.39825661929628164,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.00403645820915699,
+        "primal_x_steering_slope": 0.0053385416977107525
+      },
+      "7": {
+        "cv_r2_z": 0.20510700724190267,
+        "cv_r2_x": 0.5103331196950744,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.01210937462747097,
+        "primal_x_steering_slope": -0.00989583320915699
+      },
+      "10": {
+        "cv_r2_z": 0.5932715745353241,
+        "cv_r2_x": 0.7803432724310324,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.012890624813735485,
+        "primal_x_steering_slope": -0.01692708395421505
+      },
+      "13": {
+        "cv_r2_z": 0.8366879590819859,
+        "cv_r2_x": 0.8454746523900244,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.02278645895421505,
+        "primal_x_steering_slope": 0.01015624962747097
+      },
+      "14": {
+        "cv_r2_z": 0.9005832953026564,
+        "cv_r2_x": 0.8756161630389084,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.02669270895421505,
+        "primal_x_steering_slope": 0.01679687574505806
+      },
+      "17": {
+        "cv_r2_z": 0.960940878747512,
+        "cv_r2_x": 0.9069443351671577,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.011067708022892475,
+        "primal_x_steering_slope": -0.0074218749068677425
+      },
+      "21": {
+        "cv_r2_z": 0.9502522781959976,
+        "cv_r2_x": 0.8794179884340443,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.07174479216337204,
+        "primal_x_steering_slope": 0.06979166716337204
+      },
+      "25": {
+        "cv_r2_z": 0.9560183925810305,
+        "cv_r2_x": 0.8890318756320905,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.14687499403953552,
+        "primal_x_steering_slope": 0.14687499403953552
+      },
+      "29": {
+        "cv_r2_z": 0.9579641477893766,
+        "cv_r2_x": 0.9080560275994427,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.09544270485639572,
+        "primal_x_steering_slope": 0.0963541641831398
+      },
+      "33": {
+        "cv_r2_z": 0.9561054026996871,
+        "cv_r2_x": 0.9188810620920765,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.09531249850988388,
+        "primal_x_steering_slope": 0.08541666716337204
+      },
+      "37": {
+        "cv_r2_z": 0.9569254149386188,
+        "cv_r2_x": 0.9177172372299279,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.0716145858168602,
+        "primal_x_steering_slope": 0.064453125
+      },
+      "41": {
+        "cv_r2_z": 0.9683305230728512,
+        "cv_r2_x": 0.9192203323617543,
+        "x_low_quantile": 11.8,
+        "x_high_quantile": 23.2,
+        "primal_z_steering_slope": 0.04335937649011612,
+        "primal_x_steering_slope": 0.03463541716337204
+      }
+    },
+    "bmi_abs": {
+      "0": {
+        "cv_r2_z": 0.01330816863317208,
+        "cv_r2_x": 0.12036213653181382,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.008029513992369175,
+        "primal_x_steering_slope": -0.0047743055038154125
+      },
+      "1": {
+        "cv_r2_z": 0.019402125168753503,
+        "cv_r2_x": 0.14792495607151201,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": -0.0011935763759538531,
+        "primal_x_steering_slope": 0.0033637152519077063
+      },
+      "3": {
+        "cv_r2_z": 0.05605765160012177,
+        "cv_r2_x": 0.3588012423519752,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.005859375,
+        "primal_x_steering_slope": -0.00824652798473835
+      },
+      "5": {
+        "cv_r2_z": 0.17447406393410259,
+        "cv_r2_x": 0.6500798245329443,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.0042317709885537624,
+        "primal_x_steering_slope": -0.005642361007630825
+      },
+      "7": {
+        "cv_r2_z": 0.2580347433172917,
+        "cv_r2_x": 0.7587714367933678,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.0217013880610466,
+        "primal_x_steering_slope": 0.0034722222480922937
+      },
+      "10": {
+        "cv_r2_z": 0.34923146837294317,
+        "cv_r2_x": 0.865956259993542,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.011393229477107525,
+        "primal_x_steering_slope": -0.0023871527519077063
+      },
+      "13": {
+        "cv_r2_z": 0.8214096729184208,
+        "cv_r2_x": 0.937280996767025,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.00835503451526165,
+        "primal_x_steering_slope": -0.011393229477107525
+      },
+      "14": {
+        "cv_r2_z": 0.8625082175309339,
+        "cv_r2_x": 0.9468656993376557,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.01692708395421505,
+        "primal_x_steering_slope": -0.0128038190305233
+      },
+      "17": {
+        "cv_r2_z": 0.9349035488744307,
+        "cv_r2_x": 0.9580660878780095,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.01215277798473835,
+        "primal_x_steering_slope": -0.0067274305038154125
+      },
+      "21": {
+        "cv_r2_z": 0.9498706037666392,
+        "cv_r2_x": 0.9018422256397903,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.0458984375,
+        "primal_x_steering_slope": 0.0343967005610466
+      },
+      "25": {
+        "cv_r2_z": 0.9359771225586548,
+        "cv_r2_x": 0.9116366472516051,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.0861545130610466,
+        "primal_x_steering_slope": 0.0808376744389534
+      },
+      "29": {
+        "cv_r2_z": 0.9285669277667274,
+        "cv_r2_x": 0.9275375597079415,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.0584852434694767,
+        "primal_x_steering_slope": 0.0483940988779068
+      },
+      "33": {
+        "cv_r2_z": 0.9277818277331665,
+        "cv_r2_x": 0.9515651905399742,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.060546875,
+        "primal_x_steering_slope": 0.0442708320915699
+      },
+      "37": {
+        "cv_r2_z": 0.9294069884654048,
+        "cv_r2_x": 0.9543102289750786,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.0523003488779068,
+        "primal_x_steering_slope": 0.0360243059694767
+      },
+      "41": {
+        "cv_r2_z": 0.936793021107718,
+        "cv_r2_x": 0.9489921209057228,
+        "x_low_quantile": 21.175,
+        "x_high_quantile": 33.825,
+        "primal_z_steering_slope": 0.02701822854578495,
+        "primal_x_steering_slope": 0.0206163190305233
+      }
+    }
+  }
+}

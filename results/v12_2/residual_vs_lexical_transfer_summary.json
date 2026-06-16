@@ -1,0 +1,155 @@
+{
+  "families": {
+    "full": {
+      "mean_diagonal": 0.06662597507238388,
+      "mean_off_diagonal": 0.026334926070246314,
+      "diagonal_off_diagonal_ratio": 2.529947298681014,
+      "off_diagonal_positive_fraction": 1.0,
+      "off_diagonal_mean_ci95": [
+        0.023180127836531027,
+        0.029447871652415154
+      ],
+      "target_wise_off_diagonal_mean": {
+        "height": 0.02460937507982765,
+        "age": 0.018191964365541935,
+        "weight": 0.029868861926453456,
+        "size": 0.04351283396993365,
+        "speed": 0.01830357120239309,
+        "wealth": 0.026143973294113363,
+        "experience": 0.026443917836461748,
+        "bmi_abs": 0.02360491088724562
+      },
+      "source_wise_off_diagonal_mean": {
+        "height": 0.030057198234966824,
+        "age": 0.02670898468100599,
+        "weight": 0.033489118197134564,
+        "size": 0.029010882068957602,
+        "speed": 0.02407924085855484,
+        "wealth": 0.02296316982912166,
+        "experience": 0.01870814730812396,
+        "bmi_abs": 0.02566266738410507
+      },
+      "off_diagonal_z_score_vs_random_null": 4.84171469291642
+    },
+    "lexical_projection": {
+      "mean_diagonal": 0.08681640564464033,
+      "mean_off_diagonal": 0.01064104354736628,
+      "diagonal_off_diagonal_ratio": 8.15863643995028,
+      "off_diagonal_positive_fraction": 0.7321428571428571,
+      "off_diagonal_mean_ci95": [
+        0.006505541166682504,
+        0.01473063874382204
+      ],
+      "target_wise_off_diagonal_mean": {
+        "height": 0.007924107036420278,
+        "age": 0.00023716525174677372,
+        "weight": 0.01602957570659263,
+        "size": 0.01978236629760691,
+        "speed": 0.007798549220232027,
+        "wealth": 0.0077566963820053,
+        "experience": 0.01915457587788946,
+        "bmi_abs": 0.006445312606436866
+      },
+      "source_wise_off_diagonal_mean": {
+        "height": 0.008572823767151152,
+        "age": 0.008565848028021199,
+        "weight": 0.014355468996135252,
+        "size": 0.024058314439441477,
+        "speed": 0.0019740514856364045,
+        "wealth": 0.014397321368700691,
+        "experience": 0.005371093949569123,
+        "bmi_abs": 0.007833426344274943
+      },
+      "off_diagonal_z_score_vs_random_null": 2.040762594887509
+    },
+    "lexical_residual": {
+      "mean_diagonal": 0.044396973215043545,
+      "mean_off_diagonal": 0.02430419924868537,
+      "diagonal_off_diagonal_ratio": 1.826720261826565,
+      "off_diagonal_positive_fraction": 1.0,
+      "off_diagonal_mean_ci95": [
+        0.021553148585787444,
+        0.026906084373227453
+      ],
+      "target_wise_off_diagonal_mean": {
+        "height": 0.022642299000705992,
+        "age": 0.018526786006987095,
+        "weight": 0.02618582546710968,
+        "size": 0.039271763658949306,
+        "speed": 0.016964285634458065,
+        "wealth": 0.025265066884458065,
+        "experience": 0.022091239158596312,
+        "bmi_abs": 0.023486328178218434
+      },
+      "source_wise_off_diagonal_mean": {
+        "height": 0.029596819409302304,
+        "age": 0.025195312819310596,
+        "weight": 0.031152343909655298,
+        "size": 0.020968191724802767,
+        "speed": 0.024532645009458065,
+        "wealth": 0.019712611500705992,
+        "experience": 0.019140624973390783,
+        "bmi_abs": 0.024135044642857144
+      },
+      "off_diagonal_z_score_vs_random_null": 4.479282481315355
+    },
+    "random_null": {
+      "mean_diagonal": 0.00036621092294808477,
+      "mean_off_diagonal": -0.0007934570439829258,
+      "diagonal_off_diagonal_ratio": -0.46153843579207693,
+      "off_diagonal_positive_fraction": 0.39285714285714285,
+      "off_diagonal_mean_ci95": [
+        -0.002268022829756384,
+        0.0005554199378301356
+      ],
+      "target_wise_off_diagonal_mean": {
+        "height": 0.0011858258907782979,
+        "age": -0.0027204241237736176,
+        "weight": 8.370535631131913e-05,
+        "size": -0.00020926334712255214,
+        "speed": 0.0006417410747547235,
+        "wealth": 0.002246093745010772,
+        "experience": -0.007373047061264515,
+        "bmi_abs": -0.0002022878865578345
+      },
+      "source_wise_off_diagonal_mean": {
+        "height": -0.000592912979690092,
+        "age": -0.002294921935702275,
+        "weight": 0.00024414061460577483,
+        "size": 0.0012276785814070276,
+        "speed": -0.0020089286512562205,
+        "wealth": -0.002155412903188595,
+        "experience": 0.0010323660972062498,
+        "bmi_abs": -0.0017996651752452766
+      }
+    }
+  },
+  "paired_offdiag_comparisons": {
+    "residual_minus_lexical": {
+      "mean_difference": 0.013663155701319088,
+      "ci95": [
+        0.009511762253818492,
+        0.018002973401313013
+      ],
+      "positive_fraction": 0.8214285714285714
+    },
+    "residual_minus_full": {
+      "mean_difference": -0.0020307268215609448,
+      "ci95": [
+        -0.003206503691035323,
+        -0.0008021326504863934
+      ],
+      "positive_fraction": 0.32142857142857145
+    },
+    "lexical_minus_full": {
+      "mean_difference": -0.015693882522880034,
+      "ci95": [
+        -0.01909112110393575,
+        -0.01237945536213374
+      ],
+      "positive_fraction": 0.16071428571428573
+    }
+  },
+  "n_bootstrap": 2000,
+  "single_seed_followup": true
+}
