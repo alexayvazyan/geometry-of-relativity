@@ -476,6 +476,8 @@ Further supporting this claim is the fact that these heads generalize remarkably
 
 This transfer also scales across different k-shot prompting, as shown in \Cref{fig:xk-corr-grid-9b-height,fig:xk-deltar-overlay-9b-height}, which replicates the height attention ablation to k=1 and k=5. The objective and relativistic plane figures also provide another mechanistic lens as to how similar the attention based ablations are to $d_z$ steering.
 
+The trio is also robust to the prompt format itself. Re-running the resample ablation on the naturalistic, prose-framed prompts of \Cref{subsec:sensitivity-realism}---named individuals with no explicit instruction to compare---still collapses the readout, dropping $\mathrm{corr}(\mathrm{LD},z)$ from $0.74$ to $0.36$ on height ($\Delta r = -0.38$), paralleling the $-0.52$ drop the same trio produces on implicit-list prompts over this grid. The circuit mediating the relativistic computation is therefore not an artifact of the synthetic list format.
+
 \begin{figure}[!tbp]
   \centering
   \includegraphics[width=\linewidth,trim=0 0 0 0,clip]{figures/p2u_specificity_summary_gemma2-9b_dr.png}
