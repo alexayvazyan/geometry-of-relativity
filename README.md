@@ -43,6 +43,10 @@ pip install -e .            # numpy/scipy/sklearn/matplotlib/PIL — CPU analysi
    are committed so tiers 1–2 work without one; raw activation caches (Gemma-Scope SAE residuals,
    full attention dumps) are intentionally not committed.
 
+   **Verified:** `make extract` regenerates the prompts + LD arrays on gemma-2-9b and reproduces the
+   committed data (byte-identical prompts; LD corr 0.999 on a 5090). The full intervention pipeline
+   and the behavioral tier are documented in `extract/PIPELINE.md`.
+
 `pip install -e ".[gpu]"` adds torch/transformers for tier 3.
 
 ## Models
