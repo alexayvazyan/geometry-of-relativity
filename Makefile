@@ -1,4 +1,4 @@
-PY ?= python
+PY ?= python3
 
 .PHONY: help figures extract paper fetch clean
 
