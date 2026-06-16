@@ -252,7 +252,7 @@ This indicates that once a comparison class is present, the raw value alone is i
 
 \begin{figure}[t]
   \centering
-  \includegraphics[width=\linewidth, trim={0 0 0 50}, clip]{figures/p2a_ld_vs_z_height_gemma2-9b_2x3.png}
+  \includegraphics[width=\linewidth]{figures/p2a_ld_vs_z_height_gemma2-9b_2x3.png}
   \caption{\textbf{Logit-difference evolution with context length.}
   Without context examples, adjective judgments are driven by the raw value $x$. As context examples are added, the logit difference shifts to track relative standing, transitioning from a sharp and comparator-like step function toward a smoother and graded response.
   }
@@ -325,6 +325,53 @@ Finally, we investigate how the underlying distribution of the reference values 
 However, closer inspection reveals that bimodal distributions induce more dynamic confidence curves. Specifically, the logit difference exhibits steeper transitions around the local modes (e.g., at $z \approx -1$ and $z \approx 1$). The model outputs a lower logit difference than the normal distribution when $z$ falls just below a mode, and a higher logit difference when $z$ is just above it.
 
 This indicates that the model evaluates the raw value relative to its closest local cluster within the context, rather than relying solely on the global mean. This behavior mirrors human cognitive patterns, where individuals naturally categorize and compare a novel observation against the most similar proximal subgroup.
+
+
+\subsection{Robustness to naturalistic prompts}
+\label{subsec:sensitivity-realism}
+
+The prompts used so far present the comparison class as a terse list (``Person~1: $c_1$, \dots'').
+To check that the relative-standing effect is not an artifact of this synthetic format, we re-render
+each trial as naturalistic prose: the same sampled context values attached to named individuals in
+full sentences (e.g.\ ``Maya is 161~cm. \dots{} Amara is 170~cm. Amara
+is''), ending at the same high/low adjective cliff (\Cref{app:naturalistic-prompts} lists full example prompts). We compare two variants---a \emph{neutral}
+framing that merely describes a group of people, and a \emph{primed} framing that embeds the same
+values in a scenario carrying a strong absolute prior over the attribute (for height, a varsity
+basketball squad).
+
+\Cref{tab:naturalistic} reports the height pair on a dense $(x,z)$ grid, where the implicit frame
+reproduces the main-text readout (corr$(\logitdiff,z)\approx0.97$; cf.\ \Cref{tab:behavioral-z-corr}).
+Crucially, unlike the implicit list the naturalistic frames give no instruction to compare---the
+target sentence simply states the value and stops at the adjective. Even so, the \emph{neutral}
+framing stays strongly relativistic (corr$(\logitdiff,z)=0.93$), with only a modest rise in
+raw-magnitude reliance (corr$(\logitdiff,x)$ from $0.13$ to $0.23$): the model uses context-relative
+standing spontaneously, not because it is told to. The \emph{primed} framing, which embeds the same
+values in a scenario carrying a strong absolute prior over the attribute, shifts the balance further
+toward raw magnitude (corr$(\logitdiff,x)=0.45$, corr$(\logitdiff,z)=0.84$), though relative standing
+still dominates. The model thus integrates in-context standing with world knowledge: realistic
+phrasing alone does not weaken the relativistic computation, but a framing that makes absolute scale
+salient shifts the objective/relativistic balance, echoing the reintegration of objective anchoring
+observed at high context length (\Cref{fig:relative-objective-phase}).
+
+\begin{table}[t]
+  \centering
+  \small
+  \caption{\textbf{Relative-standing dominance survives naturalistic prompts (height).}
+  Correlations of the mean logit difference with the context-normalized standing $z$ and the raw
+  value $x$ on a dense $(x,z)$ grid. Naturalistic-neutral prose stays strongly $z$-dominant even
+  without a comparison cue; a framing that invokes a strong absolute prior (a basketball squad)
+  shifts weight toward $x$.}
+  \label{tab:naturalistic}
+  \begin{tabular}{lrr}
+    \toprule
+    Prompt frame & corr$(\logitdiff,z)$ & corr$(\logitdiff,x)$ \\
+    \midrule
+    Implicit list (main text) & \textbf{0.966} & 0.130 \\
+    Naturalistic, neutral     & \textbf{0.926} & 0.233 \\
+    Naturalistic, primed      & \textbf{0.844} & 0.450 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 
 
@@ -588,6 +635,49 @@ Intuitively, this measures the correlation between $a$ and $b$ after projecting 
 % Therefore a small lexical projection can steer more strongly than full \primalz{} if it points in a high-gain output-facing direction.
 % In the current 9B layer-33 follow-up, full \primalz{} has diagonal/off-diagonal means $+0.067/+0.026$, lexical projection has $+0.087/+0.011$, lexical residual has $+0.044/+0.024$, and a random null is approximately zero.
 % This supports a mixed mechanism: the residual carries broad cross-domain transfer, but target lexical-subspace leakage prevents a clean non-lexical claim.
+
+
+\section{Naturalistic prompt examples}
+\label{app:naturalistic-prompts}
+
+The robustness check in \Cref{subsec:sensitivity-realism} re-renders each trial as naturalistic
+prose, holding the sampled context values, the implied $(\mu,\sigma)$, and the high/low adjective
+cliff fixed; only the surface framing changes. Representative prompts follow for the height pair at
+$k=6$ context examples (implicit list, neutral naturalistic, and primed naturalistic), plus a primed
+income example. In every case the target value---and hence $z$---is identical across frames.
+
+\paragraph{Height, implicit list (main text).}
+{\small\begin{verbatim}
+Person 1: 157 cm
+Person 2: 165 cm
+Person 3: 158 cm
+Person 4: 157 cm
+Person 5: 151 cm
+Person 6: 158 cm
+Person 7: 170 cm. This person is
+\end{verbatim}}
+
+\paragraph{Height, naturalistic (neutral).}
+{\small\begin{verbatim}
+Omar is 157 cm. Kai is 165 cm. Dani is 158 cm. Chloe is 157 cm. Sofia is 151 cm. Ravi is 158 cm.
+Bex is 170 cm. Bex is
+\end{verbatim}}
+
+\paragraph{Height, naturalistic (primed).}
+{\small\begin{verbatim}
+Omar is 157 cm. Kai is 165 cm. Dani is 158 cm. Chloe is 157 cm. Sofia is 151 cm. Ravi is 158 cm.
+Bex, who just joined the varsity basketball squad, is 170 cm. Bex is
+\end{verbatim}}
+
+\paragraph{Income, naturalistic (primed).}
+{\small\begin{verbatim}
+Chloe earns $404528 a year. Sofia earns $50530 a year. Maya earns $105185 a year.
+Lucas, a new hire on the engineering team, earns $120000 a year. Lucas is
+\end{verbatim}}
+
+The neutral frame stays strongly relativistic (close to the implicit list), whereas the primed scenario (here a
+basketball squad, or a salaried team) invokes a strong absolute prior and shifts the readout partway
+toward raw magnitude (\Cref{tab:naturalistic}).
 
 
 \section{Intervention and Robustness Details}

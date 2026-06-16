@@ -223,34 +223,34 @@ _NAMES = (
 # per-domain scenario: g=group noun, item=per-person clause, target=closing clause ending at "is".
 _NATURALISTIC: dict[str, dict[str, str]] = {
     "height":     {"g": "the varsity basketball squad", "item": "{n} is {v} cm",
-                   "target": "{n}, who just joined {g}, is {x} cm. Compared with the squad, {n} is"},
+                   "target": "{n}, who just joined {g}, is {x} cm. {n} is"},
     "age":        {"g": "the hiking club", "item": "{n} is {v}",
-                   "target": "{n}, a new member of {g}, is {x}. Compared with the club, {n} is"},
+                   "target": "{n}, a new member of {g}, is {x}. {n} is"},
     "weight":     {"g": "the rowing crew", "item": "{n} weighs {v} kg",
-                   "target": "{n}, the newest member of {g}, weighs {x} kg. For the crew, {n} is"},
+                   "target": "{n}, the newest member of {g}, weighs {x} kg. {n} is"},
     "size":       {"g": "a batch of components", "item": "one part is {v} cm across",
-                   "target": "a new part in {g} is {x} cm across. For this batch, it is"},
+                   "target": "a new part in {g} is {x} cm across. It is"},
     "speed":      {"g": "this afternoon's heat", "item": "{n}'s car clocked {v} km/h",
-                   "target": "a late entrant in {g} clocked {x} km/h. For this heat, that car is"},
+                   "target": "a late entrant in {g} clocked {x} km/h. That car is"},
     "wealth":     {"g": "the engineering team", "item": "{n} earns ${v} a year",
-                   "target": "{n}, a new hire on {g}, earns ${x} a year. Compared with the team, {n} is"},
+                   "target": "{n}, a new hire on {g}, earns ${x} a year. {n} is"},
     "experience": {"g": "the studio", "item": "{n} has {v} years of experience",
-                   "target": "{n}, who just joined {g}, has {x} years of experience. For the studio, {n} is"},
+                   "target": "{n}, who just joined {g}, has {x} years of experience. {n} is"},
     "bmi_abs":    {"g": "a group of patients", "item": "{n} has a BMI of {v}",
-                   "target": "{n}, a new patient in {g}, has a BMI of {x}. Among the group, {n} is"},
+                   "target": "{n}, a new patient in {g}, has a BMI of {x}. {n} is"},
 }
 
 # Neutral target clauses: same naturalistic named-prose, but no attribute-priming scenario, so the
 # only difference from the primed frame is the world-knowledge context (B3 control).
 _NAT_NEUTRAL_TARGET: dict[str, str] = {
-    "height":     "{n} is {x} cm. Compared with the others, {n} is",
-    "age":        "{n} is {x}. Compared with the others, {n} is",
-    "weight":     "{n} weighs {x} kg. Compared with the others, {n} is",
-    "size":       "a new part is {x} cm across. Compared with the rest, it is",
-    "speed":      "{n}'s car clocked {x} km/h. Compared with the others, that car is",
-    "wealth":     "{n} earns ${x} a year. Compared with the others, {n} is",
-    "experience": "{n} has {x} years of experience. Compared with the others, {n} is",
-    "bmi_abs":    "{n} has a BMI of {x}. Compared with the others, {n} is",
+    "height":     "{n} is {x} cm. {n} is",
+    "age":        "{n} is {x}. {n} is",
+    "weight":     "{n} weighs {x} kg. {n} is",
+    "size":       "a new part is {x} cm across. It is",
+    "speed":      "{n}'s car clocked {x} km/h. That car is",
+    "wealth":     "{n} earns ${x} a year. {n} is",
+    "experience": "{n} has {x} years of experience. {n} is",
+    "bmi_abs":    "{n} has a BMI of {x}. {n} is",
 }
 
 
