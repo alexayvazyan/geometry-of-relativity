@@ -1,6 +1,6 @@
 \documentclass{article}
 
-% Recommended ICML packages.
+% Recommended packages.
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -21,9 +21,12 @@
 
 \input{commenting}
 
-% Blind workshop submission. If accepted, switch to:
-% \usepackage[accepted]{icml2026}
-\usepackage{icml2026}
+% Non-blind preprint: shows real authors, prints a neutral "Preprint" footer
+% (no proceedings/copyright notice) and uses the running title as the header.
+\usepackage[preprint]{icml2026}
+% Override the style's PDF metadata so no venue string remains in the file.
+\hypersetup{pdftitle={The Geometry of Relativity: Context-Relative Scalar Representations in LLMs},
+            pdfauthor={Alexander Ayvazyan, Jaehoon Lee, Kiho Park}, pdfsubject={}}
 
 % Local notation. Keep custom macros minimal and do not use them in the title.
 \newcommand{\zscore}{\ensuremath{z = (x-\mu)/\sigma}}
@@ -39,20 +42,27 @@
 \twocolumn[
   \icmltitle{The Geometry of Relativity: Context-Relative Scalar Representations in LLMs}
 
-  % The style file suppresses author information in the blind version.
   \begin{icmlauthorlist}
-    \icmlauthor{Anonymous Authors}{anon}
+    \icmlauthor{Alexander Ayvazyan}{aff1}
+    \icmlauthor{Jaehoon Lee}{aff2}
+    \icmlauthor{Kiho Park}{aff3}
   \end{icmlauthorlist}
 
-  \icmlaffiliation{anon}{Anonymous Institution}
-  \icmlcorrespondingauthor{Anonymous Authors}{anonymous@example.com}
+  \icmlaffiliation{aff1}{Independent Researcher}
+  \icmlaffiliation{aff2}{Affiliation TBD}
+  \icmlaffiliation{aff3}{Affiliation TBD}
+  \icmlcorrespondingauthor{Alexander Ayvazyan}{alexander.ayvazyan@gmail.com}
   \icmlkeywords{mechanistic interpretability, representation geometry, language models, gradable adjectives}
 
   \vskip 0.3in
 ]
 
-% Required by the ICML style, even for anonymous submissions.
+% Prints the author affiliations and the preprint notice at the foot of page 1.
 \printAffiliationsAndNotice{}
+
+% Force the real running-head title (the style's length check otherwise reverts it
+% to the blind-mode "Title Suppressed" placeholder).
+\fancyhead[C]{\small\bfseries The Geometry of Relativity}
 
 
 \begin{abstract}
